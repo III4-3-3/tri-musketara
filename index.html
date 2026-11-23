@@ -1,12 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tri Musketara – Vatreno oružje i taktička oprema</title>
+<meta name="description" content="Tri Musketara – dokazana i licencirana strelјačka i taktička oprema.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<header class="nav" id="nav">
+  <a href="index.html" class="nav__logo"><img src="images/logo.png" alt="Tri Musketara" onerror="this.style.display='none'"></a>
+  <nav class="nav__links" id="navLinks" aria-label="Glavna navigacija">
+    <a href="index.html" class="active">Početna</a>
+    <a href="proizvodi.html">Proizvodi</a>
+    <a href="o-nama.html">O nama</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+  <div class="nav__actions">
+    <button class="cart" aria-label="Korpa"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 7H6"/></svg><span class="cart__count" id="cartCount">0</span></button>
+    <a href="login.html" class="btn btn--sm">Login</a>
+    <button class="burger" id="burger" aria-label="Meni" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="hero__bg" id="heroBg"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">Za svaku vašu misiju</p>
+    <h1 class="hero__title">Tri Musketara</h1>
+    <p class="hero__slogan">Preciznost bez kompromisa.<br>Budite spremni za svaki izazov na terenu.</p>
+    <a href="proizvodi.html" class="btn btn--lg hero__btn">Pogledaj proizvode →</a>
+  </div>
+  <a href="#o-nama" class="hero__scroll">Istražite više ↓</a>
+</section>
+
+<section class="about" id="o-nama">
+  <div class="container about__grid">
+    <div class="about__img reveal"><img src="images/about.jpg" alt="Tri Musketara – o nama" loading="lazy"></div>
+    <div class="about__text reveal">
+      <p class="label">01 / O nama</p>
+      <h2>Vaš pouzdan saputnik u strelištu i na terenu.</h2>
+      <p>Tri Musketara okuplja ljubitelje streljaštva i taktičke opreme oko jedinstvene ideje: vrhunske performanse i bezbednost su postignuće viteza.</p>
+      <p>Od prvog pucnja do takmičarskih performansi, biramo isključivo dokazanu i licenciranu opremu.</p>
+      <a href="o-nama.html" class="btn btn--outline">Saznaj više →</a>
+    </div>
+  </div>
+</section>
+
+<section class="products">
+  <div class="container">
+    <p class="label">02 / Pažljivo odabrano</p>
+    <h2>Preporučeni proizvodi</h2>
+    <p class="products__sub">Oprema na koju možete da računate, gde god da krenete.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="card__img"><img src="images/glock19.jpg" alt="Glock 19" loading="lazy"></div>
+        <div class="card__body">
+          <span class="card__cat">Pištolji</span>
+          <h3>Glock 19</h3>
+          <p>Pouzdan i precizan za svaku situaciju.</p>
+          <strong class="card__price">65.000 RSD</strong>
+          <a href="proizvod.html?id=glock-19" class="card__link">Pogledaj proizvod →</a>
+          <button class="btn btn--block add" data-name="Glock 19">Dodaj u korpu +</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__img"><img src="images/magnum44.jpg" alt="44 Magnum" loading="lazy"></div>
+        <div class="card__body">
+          <span class="card__cat">Pištolji</span>
+          <h3>44 Magnum</h3>
+          <p>Vrhunske performanse na terenu.</p>
+          <strong class="card__price">125.000 RSD</strong>
+          <a href="proizvod.html?id=44-magnum" class="card__link">Pogledaj proizvod →</a>
+          <button class="btn btn--block add" data-name="44 Magnum">Dodaj u korpu +</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__img"><img src="images/nightvision.jpg" alt="Night vision scope" loading="lazy"></div>
+        <div class="card__body">
+          <span class="card__cat">Optika</span>
+          <h3>Night vision scope</h3>
+          <p>Kristalno jasna slika za daleki domet.</p>
+          <strong class="card__price">85.000 RSD</strong>
+          <a href="proizvod.html?id=night-vision" class="card__link">Pogledaj proizvod →</a>
+          <button class="btn btn--block add" data-name="Night vision scope">Dodaj u korpu +</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__img"><img src="images/prigusivac.jpg" alt="Prigušivač" loading="lazy"></div>
+        <div class="card__body">
+          <span class="card__cat">Dodaci</span>
+          <h3>Prigušivač</h3>
+          <p>Za tihu i efikasnu akciju.</p>
+          <strong class="card__price">35.000 RSD</strong>
+          <a href="proizvod.html?id=prigusivac" class="card__link">Pogledaj proizvod →</a>
+          <button class="btn btn--block add" data-name="Prigušivač">Dodaj u korpu +</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <p class="cta__eyebrow">Sledeća avantura počinje ovde</p>
+  <h2>Pronađite ono što tražite.</h2>
+  <p>Od strelišta do taktičkih planova – opremite se za svaki pogodak.</p>
+  <a href="proizvodi.html" class="btn btn--lg">Pogledaj kompletnu ponudu →</a>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <img src="images/logo.png" alt="Tri Musketara" class="footer__logo" onerror="this.style.display='none'">
+      <h4>Tri Musketara</h4>
+      <p>Vatreno oružje i taktička oprema. Za sve vaše male i velike avanture.</p>
+    </div>
+    <div>
+      <h4>Navigacija</h4>
+      <ul><li><a href="index.html">Početna</a></li><li><a href="proizvodi.html">Proizvodi</a></li><li><a href="o-nama.html">O nama</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+    </div>
+    <div>
+      <h4>Informacije</h4>
+      <ul><li><a href="uslovi.html">Uslovi korišćenja</a></li><li><a href="privatnost.html">Politika privatnosti</a></li><li><a href="kupovina.html">Informacije o kupovini</a></li><li><a href="dostava.html">Dostava</a></li></ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:info@trimusketara.example">info@trimusketara.example</a></li>
+        <li><a href="tel:+381110000000">+381 (0)11 000 0000</a></li>
+        <li>Primer ulice 12, Beograd</li>
+        <li class="social"><a href="#">Facebook</a><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© 2026 Tri Musketara. Sva prava zadržana.</span>
+    <span>Školski koncept · Primeri proizvoda, cena i kontakta</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
